@@ -16,6 +16,6 @@ class NotificationManager:
             connection.login(user=os.environ.get("MY_EMAIL"), password=os.environ.get("MY_PASSWORD"))
             connection.sendmail(
                 from_addr=os.environ.get("MY_EMAIL"),
-                to_addrs="tommypettersson04@gmail.com",
+                to_addrs=os.environ.get("SEND_TO"),
                 msg=message
             )
